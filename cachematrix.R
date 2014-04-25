@@ -1,3 +1,6 @@
+## makeCacheMatrix : this function caches the resule of solve()
+## in object m.
+##
 makeCacheMatrix <- function(x = matrix()) {
     m <- NULL
     set <- function(y) {
@@ -13,8 +16,9 @@ makeCacheMatrix <- function(x = matrix()) {
          getsolve = getsolve)
 }
 
-## Write a short comment describing this function
-## Return a matrix that is the inverse of 'x'
+## tcacheSolve : takes a matrix as argument and 
+## return a matrix that is the inverse of 'x'
+
 cacheSolve <- function(x, ...) {
     m <- x$getsolve()
     if ( !is.null(m)) {
